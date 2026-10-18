@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covenant Photos & Video Productions | Premier Visual Media Studio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            100: '#FFF9D2',
+                            300: '#FDE047',
+                            400: '#FACC15',
+                            500: '#EAB308',
+                            600: '#CA8A04',
+                            700: '#854D0E',
+                            800: '#543007',
+                        },
+                        dark: {
+                            950: '#05070A',
+                            900: '#0B0F17',
+                            800: '#111827',
+                            700: '#1F2937',
+                            600: '#374151'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #05070A;
+            color: #F3F4F6;
+            overflow-x: hidden;
+        }
+        .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Glassmorphism Styling */
+        .glass-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(17, 24, 39, 0.6) 100%);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(234, 179, 8, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .glass-card:hover {
+            border-color: rgba(250, 204, 21, 0.4);
+            box-shadow: 0 12px 40px 0 rgba(234, 179, 8, 0.15);
+        }
+        
+        .glass-nav {
+            background: rgba(5, 7, 10, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(234, 179, 8, 0.15);
+        }
+
+        /* 3D Metallic Gold Shimmer & Lens Flare Animations */
+        @keyframes metallicShimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { filter: drop-shadow(0 0 10px rgba(234, 179, 8, 0.6)) drop-shadow(0 0 20px rgba(202, 138, 4, 0.3)); transform: scale(1); }
+            50% { filter: drop-shadow(0 0 18px rgba(250, 204, 21, 0.9)) drop-shadow(0 0 35px rgba(234, 179, 8, 0.6)); transform: scale(1.03); }
+        }
+        @keyframes apertureRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes flareGlint {
+            0%, 100% { opacity: 0.3; transform: scale(0.8) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
+        }
+        @keyframes haloPulse {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.08); }
+        }
+
+        .gold-metallic-text {
+            background: linear-gradient(135deg, #FFF9D2 0%, #FACC15 25%, #EAB308 50%, #CA8A04 75%, #FFF9D2 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: metallicShimmer 4s linear infinite;
+        }
+
+        .gold-border-glow {
+            box-shadow: 0 0 15px rgba(234, 179, 8, 0.25), inset 0 0 10px rgba(234, 179, 8, 0.1);
+        }
+
+        .animated-logo-icon {
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+
+        .aperture-spinner {
+            transform-origin: center;
+            animation: apertureRotate 20s linear infinite;
+        }
+
+        .lens-flare {
+            animation: flareGlint 3s ease-in-out infinite;
+        }
+
+        .neon-halo {
+            animation: haloPulse 2.5s ease-in-out infinite;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #05070A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #854D0E;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FACC15;
+        }
+    </style>
+</head>
+<body class="bg-dark-950 text-gray-100 antialiased selection:bg-gold-500 selection:text-black">
+
+    <!-- FLOATING WHATSAPP BUTTON WITH GLOW EFFECT -->
+    <a href="https://wa.me/2348138588511?text=Hello%20Covenant%20Photos%20and%20Video%20Productions,%20I%20would%20like%20to%20inquire%20about%20your%20services." 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white p-4 rounded-full shadow-[0_0_25px_rgba(16,185,129,0.5)] transition-all duration-300 transform hover:scale-110 flex items-center justify-center group border border-emerald-300/40"
+       title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp text-3xl"></i>
+        <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-500 ease-out font-bold text-sm pl-0 group-hover:pl-3">
+            Chat on WhatsApp
+        </span>
+    </a>
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full z-40 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
+            
+            <!-- FLASHY 3D METALLIC GOLD LOGO -->
+            <a href="#home" class="flex items-center gap-3.5 group">
+                <div class="relative w-14 h-14 flex items-center justify-center">
+                    <!-- Dynamic Glowing Neon Halo Ring -->
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-tr from-gold-600 via-yellow-300 to-gold-400 blur-md opacity-70 neon-halo"></div>
+                    
+                    <!-- 3D Metallic Badge Outer Frame -->
+                    <div class="relative w-full h-full bg-gradient-to-b from-dark-800 via-dark-900 to-black rounded-2xl p-0.5 border border-gold-400/60 shadow-2xl flex items-center justify-center overflow-hidden animated-logo-icon">
+                        
+                        <!-- Shimmering Light Flare Gradient overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-gold-300/30 to-transparent transform -skew-x-12 opacity-80"></div>
+                        
+                        <!-- 3D Camera Silhouette & Lens Flare SVG -->
+                        <svg class="w-10 h-10 relative z-10 filter drop-shadow-[0_2px_8px_rgba(250,204,21,0.6)]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#FFF9D2"/>
+                                    <stop offset="30%" stop-color="#FACC15"/>
+                                    <stop offset="70%" stop-color="#EAB308"/>
+                                    <stop offset="100%" stop-color="#854D0E"/>
+                                </linearGradient>
+                                <radialGradient id="lensGlow" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#FFF9D2" stop-opacity="1"/>
+                                    <stop offset="40%" stop-color="#FACC15" stop-opacity="0.8"/>
+                                    <stop offset="80%" stop-color="#CA8A04" stop-opacity="0.2"/>
+                                    <stop offset="100%" stop-color="#05070A" stop-opacity="0"/>
+                                </radialGradient>
+                            </defs>
+
+                            <!-- Outer Metallic 3D Camera Frame -->
+                            <path d="M20 32C20 28.6863 22.6863 26 26 26H36.5L41.2 18.5C42.3 16.8 44.2 15.8 46.2 15.8H53.8C55.8 15.8 57.7 16.8 58.8 18.5L63.5 26H74C77.3137 26 80 28.6863 80 32V70C80 73.3137 77.3137 76 74 76H26C22.6863 76 20 73.3137 20 70V32Z" 
+                                  fill="url(#goldGradient)" stroke="#FFF9D2" stroke-width="1.5" />
+                            
+                            <!-- Flash Mount & Sensor details -->
+                            <rect x="65" y="32" width="8" height="5" rx="2" fill="#05070A" stroke="url(#goldGradient)" stroke-width="1"/>
+                            <circle cx="28" cy="34" r="2.5" fill="#FFF9D2"/>
+                            
+                            <!-- Lens Outer Bezel -->
+                            <circle cx="50" cy="51" r="22" fill="#05070A" stroke="url(#goldGradient)" stroke-width="2.5"/>
+                            
+                            <!-- Rotating Aperture Blades -->
+                            <g class="aperture-spinner" style="transform-origin: 50px 51px;">
+                                <circle cx="50" cy="51" r="17" stroke="url(#goldGradient)" stroke-width="1" stroke-dasharray="4 3" fill="none"/>
+                                <path d="M42 41L55 44L48 57L38 48Z" fill="url(#goldGradient)" opacity="0.4"/>
+                                <path d="M58 43L55 57L42 54L50 41Z" fill="url(#goldGradient)" opacity="0.4"/>
+                            </g>
+                            
+                            <!-- Glowing Core Lens -->
+                            <circle cx="50" cy="51" r="11" fill="url(#lensGlow)"/>
+                            <circle cx="50" cy="51" r="5" fill="#FFF9D2"/>
+
+                            <!-- Shimmering Light Flare Star Cross -->
+                            <g class="lens-flare" style="transform-origin: 50px 51px;">
+                                <path d="M50 35L51.5 49.5L66 51L51.5 52.5L50 67L48.5 52.5L34 51L48.5 49.5Z" fill="#FFF9D2" opacity="0.9"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Sleek Metallic Brand Typography -->
+                <div class="flex flex-col">
+                    <span class="text-xl font-extrabold tracking-widest uppercase font-cinzel gold-metallic-text leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                        Covenant
+                    </span>
+                    <span class="text-[10px] text-gray-300 font-bold tracking-[0.22em] uppercase flex items-center gap-1">
+                        <span class="w-2 h-0.5 bg-gold-400"></span> Photos & Video <span class="w-2 h-0.5 bg-gold-400"></span>
+                    </span>
+                </div>
+            </a>
+
+            <!-- DESKTOP NAV LINKS -->
+            <nav class="hidden lg:flex items-center space-x-8 text-xs uppercase tracking-widest font-semibold">
+                <a href="#home" class="text-white hover:text-gold-400 transition-colors">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-gold-400 transition-colors">About</a>
+                <a href="#services" class="text-gray-300 hover:text-gold-400 transition-colors">Services</a>
+                <a href="#portfolio" class="text-gray-300 hover:text-gold-400 transition-colors">Portfolio</a>
+                <a href="#pricing" class="text-gray-300 hover:text-gold-400 transition-colors">Packages</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-gold-400 transition-colors">Reviews</a>
+                <a href="#contact" class="text-gray-300 hover:text-gold-400 transition-colors">Contact</a>
+            </nav>
+
+            <!-- CALL TO ACTION BUTTON -->
+            <div class="hidden lg:flex items-center gap-3">
+                <a href="#booking" class="relative group overflow-hidden rounded-xl p-0.5 font-bold text-xs uppercase tracking-wider">
+                    <span class="absolute inset-0 bg-gradient-to-r from-gold-300 via-gold-500 to-gold-700 rounded-xl animate-pulse"></span>
+                    <span class="relative block px-5 py-2.5 rounded-[10px] bg-dark-900 text-gold-300 group-hover:bg-transparent group-hover:text-dark-950 transition-all duration-300">
+                        <i class="fas fa-camera-retro mr-1.5"></i> Book Session
+                    </span>
+                </a>
+            </div>
+
+            <!-- MOBILE MENU BUTTON -->
+            <button id="mobile-menu-btn" class="lg:hidden text-gold-400 hover:text-white focus:outline-none p-2 rounded-lg bg-dark-800 border border-gold-500/30">
+                <i class="fas fa-bars text-xl" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- MOBILE MENU CONTAINER -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-dark-900/95 border-b border-gold-500/30 px-6 pt-3 pb-8 space-y-4 backdrop-blur-xl">
+            <a href="#home" class="mobile-link block py-2 border-b border-gray-800 text-white font-semibold hover:text-gold-400">Home</a>
+            <a href="#about" class="mobile-link block py-2 border-b border-gray-800 text-gray-300 font-medium hover:text-gold-400">About Us</a>
+            <a href="#services" class="mobile-link block py-2 border-b border-gray-800 text-gray-300 font-medium hover:text-gold-400">Services</a>
+            <a href="#portfolio" class="mobile-link block py-2 border-b border-gray-800 text-gray-300 font-medium hover:text-gold-400">Portfolio</a>
+            <a href="#pricing" class="mobile-link block py-2 border-b border-gray-800 text-gray-300 font-medium hover:text-gold-400">Packages</a>
+            <a href="#testimonials" class="mobile-link block py-2 border-b border-gray-800 text-gray-300 font-medium hover:text-gold-400">Reviews</a>
+            <a href="#contact" class="mobile-link block py-2 border-b border-gray-800 text-gray-300 font-medium hover:text-gold-400">Contact</a>
+            <a href="https://wa.me/2348138588511" target="_blank" class="block w-full text-center bg-gradient-to-r from-gold-500 to-gold-600 text-dark-950 font-bold py-3.5 rounded-xl shadow-lg mt-4">
+                <i class="fab fa-whatsapp text-lg mr-2"></i> WhatsApp Studio Direct
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+        <!-- Background Overlay / Media -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=1920" 
+                 alt="High End Cinema Camera" 
+                 class="w-full h-full object-cover object-center opacity-25 filter brightness-75 scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-radial-gradient from-transparent via-dark-950/70 to-dark-950"></div>
+        </div>
+
+        <!-- Ambient Background Glow Spheres -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-gold-500/10 rounded-full filter blur-[120px] pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">
+            
+            <!-- Dynamic Central 3D Brand Badge Overlay -->
+            <div class="inline-flex items-center gap-3 px-6 py-2.5 rounded-full glass-card border border-gold-400/40 text-gold-300 text-xs sm:text-sm font-semibold mb-8 shadow-[0_0_20px_rgba(234,179,8,0.2)]">
+                <span class="w-2.5 h-2.5 rounded-full bg-gold-400 animate-ping"></span>
+                <span>Premier Photography & 4K Cinema Studio</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-black text-white tracking-tight leading-none mb-6 serif">
+                Capturing Pure Magic,<br/>
+                <span class="gold-metallic-text font-cinzel">Preserving Your Legacy</span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-base sm:text-lg text-gray-300 font-light mb-10 leading-relaxed">
+                From unforgettable weddings and high-definition documentaries to portrait art and drone videography, we turn life's greatest moments into timeless visual masterpieces.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                <a href="#booking" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600 hover:from-gold-300 hover:to-gold-500 text-dark-950 font-black rounded-xl shadow-[0_0_25px_rgba(234,179,8,0.4)] transition-all duration-300 transform hover:-translate-y-1 text-center text-sm uppercase tracking-wider">
+                    <i class="fas fa-calendar-check mr-2"></i> Reserve Your Shoot
+                </a>
+                <a href="https://wa.me/2348138588511?text=Hello%20Covenant%20Photos,%20I'm%20interested%20in%20booking%20a%20session!" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="w-full sm:w-auto px-8 py-4 bg-dark-900/90 hover:bg-dark-800 border border-emerald-500/50 text-emerald-400 font-bold rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 text-sm uppercase tracking-wider">
+                    <i class="fab fa-whatsapp text-xl"></i> Chat on WhatsApp
+                </a>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-16 pt-10 border-t border-gold-500/20">
+                <div class="p-4 glass-card rounded-2xl">
+                    <p class="text-3xl sm:text-4xl font-extrabold gold-metallic-text">8+</p>
+                    <p class="text-[11px] text-gray-400 uppercase tracking-widest mt-1">Years Experience</p>
+                </div>
+                <div class="p-4 glass-card rounded-2xl">
+                    <p class="text-3xl sm:text-4xl font-extrabold gold-metallic-text">500+</p>
+                    <p class="text-[11px] text-gray-400 uppercase tracking-widest mt-1">Events Covered</p>
+                </div>
+                <div class="p-4 glass-card rounded-2xl">
+                    <p class="text-3xl sm:text-4xl font-extrabold gold-metallic-text">4K UHD</p>
+                    <p class="text-[11px] text-gray-400 uppercase tracking-widest mt-1">Video Precision</p>
+                </div>
+                <div class="p-4 glass-card rounded-2xl">
+                    <p class="text-3xl sm:text-4xl font-extrabold gold-metallic-text">100%</p>
+                    <p class="text-[11px] text-gray-400 uppercase tracking-widest mt-1">Client Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 bg-dark-900/60 relative border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                
+                <!-- Image Composite with Metallic Frame -->
+                <div class="relative">
+                    <div class="relative rounded-3xl overflow-hidden border-2 border-gold-500/30 shadow-[0_0_30px_rgba(0,0,0,0.8)]">
+                        <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=800" 
+                             alt="Professional Photographer in Studio" 
+                             class="w-full h-[480px] object-cover filter contrast-105">
+                    </div>
+                    
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -right-6 w-3/4 glass-card p-5 rounded-2xl border border-gold-400/40 hidden sm:block shadow-2xl">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-400 to-gold-700 flex items-center justify-center text-dark-950 font-bold text-2xl shadow-lg">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Ultra Cinema Gear</h4>
+                                <p class="text-xs text-gray-300">State-of-the-art 4K cameras, drone & studio lighting</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="space-y-6">
+                    <div class="inline-flex items-center gap-2 text-gold-400 text-xs font-extrabold uppercase tracking-widest">
+                        <span class="w-8 h-0.5 bg-gold-400"></span> About Our Studio
+                    </div>
+
+                    <h2 class="text-3xl sm:text-5xl font-bold text-white serif">
+                        Welcome to <span class="gold-metallic-text font-cinzel">Covenant Photos</span> & Video Productions
+                    </h2>
+
+                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+                        At Covenant Photos and Video Productions, photography is more than clicking a shutter—it is an art form of capturing pure human emotion, elegance, and timeless beauty.
+                    </p>
+
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        With over 8 years of excellence, we specialize in high-end wedding cinematography, portrait photography, corporate media production, and aerial videography. Our mission is to preserve your most cherished memories with uncompromised clarity and artistic craftsmanship.
+                    </p>
+
+                    <!-- Key Pillars Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="p-3.5 glass-card rounded-xl flex items-start gap-3">
+                            <i class="fas fa-camera text-gold-400 text-lg mt-0.5"></i>
+                            <div>
+                                <h5 class="text-white font-semibold text-xs uppercase tracking-wider">Ultra-HD Visuals</h5>
+                                <p class="text-xs text-gray-400 mt-0.5">Crisp studio imagery and 4K cinema master clips.</p>
+                            </div>
+                        </div>
+                        <div class="p-3.5 glass-card rounded-xl flex items-start gap-3">
+                            <i class="fas fa-bolt text-gold-400 text-lg mt-0.5"></i>
+                            <div>
+                                <h5 class="text-white font-semibold text-xs uppercase tracking-wider">Fast Delivery</h5>
+                                <p class="text-xs text-gray-400 mt-0.5">Prompt post-production and album releases.</p>
+                            </div>
+                        </div>
+                        <div class="p-3.5 glass-card rounded-xl flex items-start gap-3">
+                            <i class="fas fa-gem text-gold-400 text-lg mt-0.5"></i>
+                            <div>
+                                <h5 class="text-white font-semibold text-xs uppercase tracking-wider">Premium Albums</h5>
+                                <p class="text-xs text-gray-400 mt-0.5">Luxury acrylic wall frames and leather photobooks.</p>
+                            </div>
+                        </div>
+                        <div class="p-3.5 glass-card rounded-xl flex items-start gap-3">
+                            <i class="fas fa-headset text-gold-400 text-lg mt-0.5"></i>
+                            <div>
+                                <h5 class="text-white font-semibold text-xs uppercase tracking-wider">Dedicated Support</h5>
+                                <p class="text-xs text-gray-400 mt-0.5">Personalized consultation for every project.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="https://wa.me/2348138588511" target="_blank" class="inline-flex items-center gap-2 text-gold-300 hover:text-gold-200 font-bold text-sm group">
+                            <span>Direct Consultation on WhatsApp</span>
+                            <i class="fas fa-arrow-right transform group-hover:translate-x-1.5 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES OFFERED SECTION -->
+    <section id="services" class="py-24 bg-dark-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-400 text-xs font-extrabold uppercase tracking-widest">Our Expertise</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-2 serif">Professional Services</h2>
+                <p class="text-gray-400 mt-4 text-sm sm:text-base">Comprehensive photography and video solutions tailored to tell your unique story.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="glass-card rounded-3xl p-8 hover:border-gold-400 transition-all duration-300 group hover:-translate-y-2 relative overflow-hidden">
+                    <div class="w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-700 rounded-2xl flex items-center justify-center text-dark-950 font-bold mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-rings-wedding text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Wedding Photography & Cinema</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Complete coverage of pre-wedding shoots, traditional ceremonies, and white weddings with cinematic highlight reels and luxury photo albums.
+                    </p>
+                    <a href="#booking" onclick="preselectService('Wedding Photography & Cinema')" class="text-xs font-bold uppercase tracking-wider text-gold-400 hover:text-gold-300 inline-flex items-center gap-1.5">
+                        Book Service <i class="fas fa-chevron-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-card rounded-3xl p-8 hover:border-gold-400 transition-all duration-300 group hover:-translate-y-2 relative overflow-hidden">
+                    <div class="w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-700 rounded-2xl flex items-center justify-center text-dark-950 font-bold mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-building text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Corporate Events & Documentaries</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        High-impact corporate summits, brand documentaries, executive headshots, product photography, and promotional commercial videos.
+                    </p>
+                    <a href="#booking" onclick="preselectService('Corporate Events & Documentaries')" class="text-xs font-bold uppercase tracking-wider text-gold-400 hover:text-gold-300 inline-flex items-center gap-1.5">
+                        Book Service <i class="fas fa-chevron-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-card rounded-3xl p-8 hover:border-gold-400 transition-all duration-300 group hover:-translate-y-2 relative overflow-hidden">
+                    <div class="w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-700 rounded-2xl flex items-center justify-center text-dark-950 font-bold mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-user-tie text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Studio Portrait Sessions</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Creative indoor studio portraits for birthdays, maternity shoots, fashion lookbooks, personal brand building, and family portraits.
+                    </p>
+                    <a href="#booking" onclick="preselectService('Studio Portrait Sessions')" class="text-xs font-bold uppercase tracking-wider text-gold-400 hover:text-gold-300 inline-flex items-center gap-1.5">
+                        Book Service <i class="fas fa-chevron-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass-card rounded-3xl p-8 hover:border-gold-400 transition-all duration-300 group hover:-translate-y-2 relative overflow-hidden">
+                    <div class="w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-700 rounded-2xl flex items-center justify-center text-dark-950 font-bold mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-film text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Video Post-Production & Color</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Master-level video editing, professional cinematic color grading, sound design, graphics overlays, and trailer production.
+                    </p>
+                    <a href="#booking" onclick="preselectService('Video Editing & Post-Production')" class="text-xs font-bold uppercase tracking-wider text-gold-400 hover:text-gold-300 inline-flex items-center gap-1.5">
+                        Book Service <i class="fas fa-chevron-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="glass-card rounded-3xl p-8 hover:border-gold-400 transition-all duration-300 group hover:-translate-y-2 relative overflow-hidden">
+                    <div class="w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-700 rounded-2xl flex items-center justify-center text-dark-950 font-bold mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-plane-flight text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Drone Aerial Videography</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Breathtaking 4K aerial footage and wide-angle photo perspectives for outdoor events, estate developments, and music videos.
+                    </p>
+                    <a href="#booking" onclick="preselectService('Drone Aerial Videography')" class="text-xs font-bold uppercase tracking-wider text-gold-400 hover:text-gold-300 inline-flex items-center gap-1.5">
+                        Book Service <i class="fas fa-chevron-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="glass-card rounded-3xl p-8 hover:border-gold-400 transition-all duration-300 group hover:-translate-y-2 relative overflow-hidden">
+                    <div class="w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-700 rounded-2xl flex items-center justify-center text-dark-950 font-bold mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-photo-album text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Custom Photo Albums & Frames</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Luxury flush-mount photobook albums, large acrylic glass wall prints, canvas enlargements, and custom framing services.
+                    </p>
+                    <a href="#booking" onclick="preselectService('Custom Photo Albums & Frames')" class="text-xs font-bold uppercase tracking-wider text-gold-400 hover:text-gold-300 inline-flex items-center gap-1.5">
+                        Book Service <i class="fas fa-chevron-right text-[10px]"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO / GALLERY SECTION -->
+    <section id="portfolio" class="py-24 bg-dark-900/80 border-t border-b border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-gold-400 text-xs font-extrabold uppercase tracking-widest">Our Portfolio</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-2 serif">Featured Gallery</h2>
+                <p class="text-gray-400 mt-4 text-sm sm:text-base">Explore our recent photography and video production highlights.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12" id="portfolio-filters">
+                <button class="filter-btn active px-6 py-2.5 rounded-xl text-xs font-extrabold uppercase tracking-wider transition-all duration-300 bg-gradient-to-r from-gold-400 to-gold-600 text-dark-950 shadow-md" data-filter="all">All Works</button>
+                <button class="filter-btn px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 bg-dark-800 hover:bg-dark-700 text-gray-300 border border-gray-800" data-filter="wedding">Weddings</button>
+                <button class="filter-btn px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 bg-dark-800 hover:bg-dark-700 text-gray-300 border border-gray-800" data-filter="portrait">Portraits</button>
+                <button class="filter-btn px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 bg-dark-800 hover:bg-dark-700 text-gray-300 border border-gray-800" data-filter="events">Events</button>
+                <button class="filter-btn px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 bg-dark-800 hover:bg-dark-700 text-gray-300 border border-gray-800" data-filter="video">Video Clips</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+                
+                <!-- Item 1 -->
+                <div class="gallery-item wedding group relative rounded-2xl overflow-hidden cursor-pointer border border-gray-800 hover:border-gold-500/50 transition-all duration-500 shadow-xl" onclick="openLightbox('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1200', 'Royal Wedding Ceremony')">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=600" alt="Wedding Shoot" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs text-gold-400 font-bold uppercase tracking-widest">Wedding Photography</span>
+                        <h4 class="text-lg font-bold text-white serif">Royal Wedding Celebration</h4>
+                        <p class="text-xs text-gray-300 mt-1"><i class="fas fa-search-plus text-gold-400 mr-1"></i> Expand Fullscreen</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="gallery-item portrait group relative rounded-2xl overflow-hidden cursor-pointer border border-gray-800 hover:border-gold-500/50 transition-all duration-500 shadow-xl" onclick="openLightbox('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=1200', 'Studio Fashion Portrait')">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600" alt="Studio Portrait" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs text-gold-400 font-bold uppercase tracking-widest">Studio Portrait</span>
+                        <h4 class="text-lg font-bold text-white serif">Glamour Fashion Shoot</h4>
+                        <p class="text-xs text-gray-300 mt-1"><i class="fas fa-search-plus text-gold-400 mr-1"></i> Expand Fullscreen</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="gallery-item events group relative rounded-2xl overflow-hidden cursor-pointer border border-gray-800 hover:border-gold-500/50 transition-all duration-500 shadow-xl" onclick="openLightbox('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200', 'Corporate Annual Summit')">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=600" alt="Corporate Event" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs text-gold-400 font-bold uppercase tracking-widest">Corporate Events</span>
+                        <h4 class="text-lg font-bold text-white serif">Leadership Summit</h4>
+                        <p class="text-xs text-gray-300 mt-1"><i class="fas fa-search-plus text-gold-400 mr-1"></i> Expand Fullscreen</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="gallery-item video group relative rounded-2xl overflow-hidden cursor-pointer border border-gray-800 hover:border-gold-500/50 transition-all duration-500 shadow-xl" onclick="openLightbox('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=1200', 'Cinematic Drone Footage')">
+                    <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=600" alt="Video Shoot" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs text-gold-400 font-bold uppercase tracking-widest">Video Production</span>
+                        <h4 class="text-lg font-bold text-white serif">Aerial 4K Videography</h4>
+                        <p class="text-xs text-gray-300 mt-1"><i class="fas fa-play-circle text-gold-400 mr-1"></i> View Highlight</p>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="gallery-item wedding group relative rounded-2xl overflow-hidden cursor-pointer border border-gray-800 hover:border-gold-500/50 transition-all duration-500 shadow-xl" onclick="openLightbox('https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=1200', 'Traditional Couples Shoot')">
+                    <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=600" alt="Traditional Wedding" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs text-gold-400 font-bold uppercase tracking-widest">Traditional Wedding</span>
+                        <h4 class="text-lg font-bold text-white serif">Culture & Joy Session</h4>
+                        <p class="text-xs text-gray-300 mt-1"><i class="fas fa-search-plus text-gold-400 mr-1"></i> Expand Fullscreen</p>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="gallery-item portrait group relative rounded-2xl overflow-hidden cursor-pointer border border-gray-800 hover:border-gold-500/50 transition-all duration-500 shadow-xl" onclick="openLightbox('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1200', 'Executive Headshots')">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600" alt="Male Portrait" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-xs text-gold-400 font-bold uppercase tracking-widest">Executive Portrait</span>
+                        <h4 class="text-lg font-bold text-white serif">Corporate Brand Headshot</h4>
+                        <p class="text-xs text-gray-300 mt-1"><i class="fas fa-search-plus text-gold-400 mr-1"></i> Expand Fullscreen</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/95 hidden items-center justify-center p-4 backdrop-blur-md">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl hover:text-gold-400 transition-colors">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="max-w-4xl w-full text-center">
+            <img id="lightbox-img" src="" alt="Enlarged view" class="max-h-[80vh] mx-auto rounded-2xl shadow-2xl border border-gold-500/30">
+            <h3 id="lightbox-caption" class="text-white text-xl font-bold mt-4 serif"></h3>
+        </div>
+    </div>
+
+    <!-- PACKAGES & PRICING TABLE -->
+    <section id="pricing" class="py-24 bg-dark-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-400 text-xs font-extrabold uppercase tracking-widest">Flexible Tiers</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-2 serif">Session Packages</h2>
+                <p class="text-gray-400 mt-4 text-sm sm:text-base">Transparent and customizable pricing for every occasion and budget.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                
+                <!-- Package 1 -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col justify-between border border-gray-800 hover:border-gold-500/30 transition-all duration-300">
+                    <div>
+                        <div class="inline-block px-3 py-1 bg-dark-800 text-gray-300 text-xs font-bold rounded-full mb-4 uppercase tracking-wider">Studio Portrait</div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Basic Session</h3>
+                        <p class="text-gray-400 text-sm mb-6">Ideal for personal headshots, birthday portraits & single concepts.</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-gray-400 text-xs uppercase tracking-wider block">Flexible Pricing</span>
+                            <span class="text-3xl font-extrabold gold-metallic-text">Standard Rate</span>
+                        </div>
+
+                        <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                            <li class="flex items-center gap-2.5"><i class="fas fa-check-circle text-gold-400"></i> 1 Hour Studio Session</li>
+                            <li class="flex items-center gap-2.5"><i class="fas fa-check-circle text-gold-400"></i> 5 Soft-Copy Edited Photos</li>
+                            <li class="flex items-center gap-2.5"><i class="fas fa-check-circle text-gold-400"></i> 2 Outfit Changes</li>
+                            <li class="flex items-center gap-2.5"><i class="fas fa-check-circle text-gold-400"></i> High-Res Digital Delivery</li>
+                            <li class="flex items-center gap-2.5 text-gray-600"><i class="fas fa-times-circle"></i> Video Highlights</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/2348138588511?text=Hello%20Covenant%20Photos,%20I'd%20like%20to%20book%20the%20Basic%20Session%20Package." 
+                       target="_blank" 
+                       class="w-full py-3.5 bg-dark-800 hover:bg-gold-500 hover:text-dark-950 text-white font-bold rounded-xl transition-all duration-300 text-center block text-xs uppercase tracking-wider border border-gray-700">
+                        Book Basic Package
+                    </a>
+                </div>
+
+                <!-- Package 2 (Featured) -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col justify-between border-2 border-gold-400 relative bg-dark-900/90 transform md:-translate-y-3 shadow-[0_0_35px_rgba(234,179,8,0.25)]">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-gold-400 to-gold-600 text-dark-950 font-black text-xs px-5 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
+                        Most Popular
+                    </div>
+
+                    <div>
+                        <div class="inline-block px-3 py-1 bg-gold-500/20 text-gold-300 text-xs font-bold rounded-full mb-4 mt-2 uppercase tracking-wider">Event & Portrait</div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Gold Package</h3>
+                        <p class="text-gray-400 text-sm mb-6">Perfect for birthdays, engagements, and corporate events.</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-gray-400 text-xs uppercase tracking-wider block">Recommended Choice</span>
+                            <span class="text-3xl font-extrabold gold-metallic-text">Best Value</span>
+                        </div>
+
+                        <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                            <li class="flex items-center gap-2.5"><i class="fas fa-check-circle text-gold-400"></i> Full Day Event Coverage</li>
+                            <li class="flex items-center gap-2.5"><i class="fas fa-check-circle text-gold-400"></i> 20 Retouched High-Res Photos</li>
+                            <li class="flex items-center gap-2.5"><i class="fas fa-check-circle text-gold-400"></i> 1 Medium Photo Wall Frame</li>
+                            <li class="flex items-center gap-2.5"><i class="fas fa-check-circle text-gold-400"></i> 1-2 Minute Highlight Reel</li>
+                            <li class="flex items-center gap-2.5"><i class="fas fa-check-circle text-gold-400"></i> Custom Flash Drive Delivery</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/2348138588511?text=Hello%20Covenant%20Photos,%20I'd%20like%20to%20book%20the%20Gold%20Package." 
+                       target="_blank" 
+                       class="w-full py-3.5 bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600 hover:from-gold-300 hover:to-gold-500 text-dark-950 font-extrabold rounded-xl transition-all duration-300 text-center shadow-lg block text-xs uppercase tracking-wider">
+                        Select Gold Package
+                    </a>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col justify-between border border-gray-800 hover:border-gold-500/30 transition-all duration-300">
+                    <div>
+                        <div class="inline-block px-3 py-1 bg-dark-800 text-gray-300 text-xs font-bold rounded-full mb-4 uppercase tracking-wider">Full Production</div>
+                        <h3 class="text-2xl font-bold text-white mb-2">VIP Wedding & Cinema</h3>
+                        <p class="text-gray-400 text-sm mb-6">Full luxury photography & video experience for grand events.</p>
+                        
+                        <div class="mb-6">
+                            <span class="text-gray-400 text-xs uppercase tracking-wider block">Luxury Coverage</span>
+                            <span class="text-3xl font-extrabold gold-metallic-text">VIP Production</span>
+                        </div>
+
+                        <ul class="space-y-3 text-sm text-gray-300 mb-8">
+                            <li class="flex items-center gap-2.5"><i class="fas fa-check-circle text-gold-400"></i> Multi-Cam Photo & Video Crew</li>
+                            <li class="flex items-center gap-2.5"><i class="fas fa-check-circle text-gold-400"></i> Aerial 4K Drone Footage</li>
+                            <li class="flex items-center gap-2.5"><i class="fas fa-check-circle text-gold-400"></i> Luxury Photobook Album</li>
+                            <li class="flex items-center gap-2.5"><i class="fas fa-check-circle text-gold-400"></i> Full Cinematic Feature Film</li>
+                            <li class="flex items-center gap-2.5"><i class="fas fa-check-circle text-gold-400"></i> 2 Large Wall Acrylic Frames</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/2348138588511?text=Hello%20Covenant%20Photos,%20I'd%20like%20to%20inquire%20about%20the%20VIP%20Wedding%20%26%20Cinema%20Package." 
+                       target="_blank" 
+                       class="w-full py-3.5 bg-dark-800 hover:bg-gold-500 hover:text-dark-950 text-white font-bold rounded-xl transition-all duration-300 text-center block text-xs uppercase tracking-wider border border-gray-700">
+                        Select VIP Package
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="py-24 bg-dark-900/60 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-400 text-xs font-extrabold uppercase tracking-widest">Client Testimonials</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-2 serif">Words From Clients</h2>
+                <p class="text-gray-400 mt-4 text-sm sm:text-base">Real experiences from people who trusted Covenant Studio with their moments.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="glass-card p-8 rounded-3xl relative flex flex-col justify-between">
+                    <div>
+                        <div class="text-gold-400 text-2xl mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            "Covenant Photos covered our wedding and the video quality was beyond our expectations! They captured all the right emotions. Highly recommended studio!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-800">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-gold-400 to-gold-600 text-dark-950 font-bold flex items-center justify-center">
+                            EA
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">Emeka & Anita</h4>
+                            <p class="text-xs text-gray-400">Wedding Client</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="glass-card p-8 rounded-3xl relative flex flex-col justify-between">
+                    <div>
+                        <div class="text-gold-400 text-2xl mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            "Extremely professional and patient during my birthday shoot. The photos were delivered promptly and the retouching was natural!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-800">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-gold-400 to-gold-600 text-dark-950 font-bold flex items-center justify-center">
+                            SO
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">Sandra O.</h4>
+                            <p class="text-xs text-gray-400">Studio Portrait</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="glass-card p-8 rounded-3xl relative flex flex-col justify-between">
+                    <div>
+                        <div class="text-gold-400 text-2xl mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            "We engaged Covenant Video Productions for our corporate documentary. The drone footage and color editing were top tier."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-gray-800">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-gold-400 to-gold-600 text-dark-950 font-bold flex items-center justify-center">
+                            DC
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">David C.</h4>
+                            <p class="text-xs text-gray-400">Corporate Media Lead</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE BOOKING FORM -->
+    <section id="booking" class="py-24 bg-dark-950 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-8 sm:p-12 border-2 border-gold-500/40 shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-24 -right-24 w-48 h-48 bg-gold-500/20 rounded-full filter blur-3xl"></div>
+
+                <div class="text-center mb-10">
+                    <span class="text-gold-400 text-xs font-extrabold uppercase tracking-widest">Fast Inquiry</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1 serif">Book Your Date</h2>
+                    <p class="text-gray-400 text-sm mt-2">Fill out the form below to auto-generate a direct booking inquiry via WhatsApp.</p>
+                </div>
+
+                <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">Full Name</label>
+                            <input type="text" id="client-name" required placeholder="John Doe" 
+                                   class="w-full bg-dark-900 border border-gray-800 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-gold-400 transition-colors text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">Phone Number</label>
+                            <input type="tel" id="client-phone" required placeholder="08138588511" 
+                                   class="w-full bg-dark-900 border border-gray-800 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-gold-400 transition-colors text-sm">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">Service Required</label>
+                            <select id="client-service" required class="w-full bg-dark-900 border border-gray-800 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-gold-400 transition-colors text-sm">
+                                <option value="" disabled selected>Select a Service</option>
+                                <option value="Wedding Photography & Cinema">Wedding Photography & Cinema</option>
+                                <option value="Corporate Events & Documentaries">Corporate Events & Documentaries</option>
+                                <option value="Studio Portrait Sessions">Studio Portrait Sessions</option>
+                                <option value="Video Editing & Post-Production">Video Post-Production & Color</option>
+                                <option value="Drone Aerial Videography">Drone Aerial Videography</option>
+                                <option value="Custom Photo Albums & Frames">Custom Photo Albums & Frames</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">Preferred Event Date</label>
+                            <input type="date" id="client-date" required 
+                                   class="w-full bg-dark-900 border border-gray-800 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-gold-400 transition-colors text-sm">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">Event Location / Notes</label>
+                        <textarea id="client-notes" rows="4" placeholder="Tell us about location, venue, or special video preferences..." 
+                                  class="w-full bg-dark-900 border border-gray-800 rounded-xl px-4 py-3.5 text-white focus:outline-none focus:border-gold-400 transition-colors text-sm"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600 hover:from-gold-300 hover:to-gold-500 text-dark-950 font-extrabold rounded-xl shadow-xl transition-all duration-300 text-center flex items-center justify-center gap-2 text-sm uppercase tracking-wider">
+                        <i class="fab fa-whatsapp text-xl"></i> Submit Inquiry via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer id="contact" class="bg-black pt-20 pb-10 border-t border-gold-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                
+                <!-- Column 1: Brand with Flashy Animated Logo -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold-400 to-gold-700 p-2 flex items-center justify-center text-dark-950 font-bold">
+                            <i class="fas fa-camera text-xl"></i>
+                        </div>
+                        <span class="text-lg font-black font-cinzel text-white">Covenant Photos</span>
+                    </div>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Covenant Photos and Video Productions captures unforgettable life moments with cinematic imagery, drone perspectives, and luxury album production.
+                    </p>
+                    <div class="flex space-x-3 pt-2">
+                        <a href="https://wa.me/2348138588511" target="_blank" class="w-9 h-9 rounded-xl bg-dark-900 border border-gray-800 hover:border-gold-400 hover:text-gold-400 flex items-center justify-center text-gray-300 transition-colors">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-xl bg-dark-900 border border-gray-800 hover:border-gold-400 hover:text-gold-400 flex items-center justify-center text-gray-300 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-xl bg-dark-900 border border-gray-800 hover:border-gold-400 hover:text-gold-400 flex items-center justify-center text-gray-300 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-xl bg-dark-900 border border-gray-800 hover:border-gold-400 hover:text-gold-400 flex items-center justify-center text-gray-300 transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Navigation -->
+                <div>
+                    <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-4 border-b border-gray-800 pb-2">Quick Navigation</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#home" class="hover:text-gold-400 transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-gold-400 transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-gold-400 transition-colors">Services</a></li>
+                        <li><a href="#portfolio" class="hover:text-gold-400 transition-colors">Portfolio Gallery</a></li>
+                        <li><a href="#pricing" class="hover:text-gold-400 transition-colors">Session Packages</a></li>
+                        <li><a href="#booking" class="hover:text-gold-400 transition-colors">Book Date</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Info -->
+                <div>
+                    <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-4 border-b border-gray-800 pb-2">Direct Contact</h4>
+                    <ul class="space-y-3 text-xs text-gray-400">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-phone text-gold-400 mt-0.5"></i>
+                            <div>
+                                <p class="text-white font-semibold">08138588511</p>
+                                <p class="text-[10px] text-gray-500">Phone Calls</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fab fa-whatsapp text-emerald-400 text-sm mt-0.5"></i>
+                            <div>
+                                <a href="https://wa.me/2348138588511" target="_blank" class="text-emerald-400 font-semibold hover:underline">
+                                    +234 813 858 8511
+                                </a>
+                                <p class="text-[10px] text-gray-500">WhatsApp Direct</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fas fa-clock text-gold-400 mt-0.5"></i>
+                            <div>
+                                <p class="text-white font-semibold">Mon - Sat: 8:00 AM - 7:00 PM</p>
+                                <p class="text-[10px] text-gray-500">Sunday by Booking</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Studio Promise -->
+                <div>
+                    <h4 class="text-white font-bold text-xs uppercase tracking-widest mb-4 border-b border-gray-800 pb-2">Our Promise</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-4">
+                        We guarantee high-resolution mastery, cinematic storytelling, and prompt delivery for all your milestones.
+                    </p>
+                    <a href="https://wa.me/2348138588511?text=Hello%20Covenant%20Photos,%20I'd%20like%20to%20ask%20a%20quick%20question." 
+                       target="_blank" 
+                       class="inline-block px-4 py-2 bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 rounded-xl text-xs font-bold hover:bg-emerald-500 hover:text-white transition-colors">
+                        <i class="fab fa-whatsapp mr-1"></i> Quick Inquiry
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-gray-900 text-center text-xs text-gray-500 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>&copy; <span id="year"></span> Covenant Photos and Video Productions. All rights reserved.</p>
+                <p class="text-gray-600">Built for Visual Excellence</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Set dynamic current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            }
+        });
+
+        // Close mobile menu when clicking menu links
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Portfolio Filtering Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-gradient-to-r', 'from-gold-400', 'to-gold-600', 'text-dark-950', 'shadow-md');
+                    b.classList.add('bg-dark-800', 'text-gray-300');
+                });
+
+                btn.classList.add('active', 'bg-gradient-to-r', 'from-gold-400', 'to-gold-600', 'text-dark-950', 'shadow-md');
+                btn.classList.remove('bg-dark-800', 'text-gray-300');
+
+                const filter = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Lightbox Functions
+        function openLightbox(imageSrc, caption) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+
+            lightboxImg.src = imageSrc;
+            lightboxCaption.textContent = caption;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('flex');
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Preselect service in booking form
+        function preselectService(serviceName) {
+            const serviceSelect = document.getElementById('client-service');
+            if (serviceSelect) {
+                serviceSelect.value = serviceName;
+            }
+        }
+
+        // WhatsApp Form Handler
+        function handleBookingSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('client-name').value;
+            const phone = document.getElementById('client-phone').value;
+            const service = document.getElementById('client-service').value;
+            const date = document.getElementById('client-date').value;
+            const notes = document.getElementById('client-notes').value;
+
+            // Formulate WhatsApp message text
+            let message = `Hello Covenant Photos and Video Productions,%0A%0A` +
+                          `I would like to book a session / request a quote.%0A%0A` +
+                          `*Name:* ${encodeURIComponent(name)}%0A` +
+                          `*Phone:* ${encodeURIComponent(phone)}%0A` +
+                          `*Service:* ${encodeURIComponent(service)}%0A` +
+                          `*Preferred Date:* ${encodeURIComponent(date)}%0A`;
+
+            if (notes.trim() !== '') {
+                message += `*Notes/Location:* ${encodeURIComponent(notes)}`;
+            }
+
+            // Redirect directly to WhatsApp chat
+            const whatsappUrl = `https://wa.me/2348138588511?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
